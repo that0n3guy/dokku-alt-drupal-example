@@ -1,0 +1,37 @@
+<?php
+/**
+ * @file frontpage_slider.module
+ * TODO: Enter file description here.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function frontpage_slider_theme($existing, $type, $theme, $path) {
+  $module_path = drupal_get_path( 'module', 'frontpage_slider' );
+
+  $themes['views_slideshow'] = array(
+    //'template'	=> 'views-slideshow--frontpage-slider',
+    //'path'  => $module_path.'/templates',
+    //'base hook' => 'views_view_fields',
+    'type'	=> 'module',
+    //'theme_path'	=> $module_path,
+    'preprocess functions' => array(
+      'frontpage_slider_preprocess_views_slideshow'
+    )
+  );
+
+  return $themes;
+}
+
+function frontpage_slider_preprocess_views_slideshow (&$vars){
+  // See your view's UI Theme:information page for field names.
+  // Or use dpm() (need devel module) or var_dump() 
+  // to see what's available in the $vars array.
+  // dpm($vars);
+  // $my_var = $vars['fields']['field_my_field']->content;
+
+  // Expose whatever custom variables you want to your template file.
+  // $vars['new_var'] = 'Some text ' . $my_var; 
+  drupal_add_css(drupal_get_path('module', 'frontpage_slider') . '/templates/css/frontpage_slider.css');  
+}

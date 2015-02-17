@@ -1,0 +1,8 @@
+name = Frontpage Slider from Views
+description = Easily create a frontpage slider using views slideshow.
+dependencies[] = views
+dependencies[] = features
+dependencies[] = draggableviews
+dependencies[] = views_slideshow
+core = 7.x
+files[] = frontpage_slider.module

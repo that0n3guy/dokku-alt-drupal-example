@@ -1,0 +1,2 @@
+0 * * * * cd /app && drush @sites cron --yes | logger -t cron &
+

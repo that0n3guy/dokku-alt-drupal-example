@@ -1,0 +1,37 @@
+.frontpage-slider-body {
+position: absolute;
+bottom: 0;
+padding: 20px 15px 15px;
+background: url(../images/overlay-text.png) repeat 0 0;
+width: 851px;
+color: white;
+}
+
+.frontpage-slider-body h2 {
+font-weight: normal;
+color: white;
+margin-bottom: 0;
+font-size: 32px;
+letter-spacing: 1px;
+line-height: 24px;
+padding: 0;
+}
+
+.views-slideshow-pager-field-item {
+  display: block;
+  width: 13px;
+  height: 0;
+  padding-top: 13px;
+  background-image: url(../images/pagination.png);
+  background-position: 0 0;
+  float: right;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.views-slideshow-pager-field-item:hover {
+  background-position: 0 -26px;
+}
+.views-slideshow-pager-field-item.active, .views-slideshow-pager-field-item.active:hover {
+  background-position: 0 -13px;
+}
